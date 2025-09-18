@@ -1,0 +1,23 @@
+<div class="topbar">
+    <button class="menu-toggle" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="search-bar">
+        <form method="GET" action="/user-dashboard" class="input-group">
+            <input type="text" class="form-control" name="search" value="<%= query.search || '' %>" placeholder="Search products...">
+            <button class="btn" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+    <div class="user-profile">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+        <span>
+            <%=data.name%>
+        </span>
+    </div>
+    <a href="/logout" class="logout-link" id="logoutLink">
+        <i class="fas fa-sign-out-alt"></i>
+        <span>Logout</span>
+    </a>
+</div>
